@@ -1,0 +1,22 @@
+{
+    "python.pythonPath": "ambiente_virtual/bin/python",
+    "code-runner.ignoreSelection": true,
+    "code-runner.runInTerminal": true,
+    //    
+    "python.formatting.provider": "autopep8",
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    // 
+    "python.linting.mypyEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.testing.unittestEnabled": true,
+    "code-runner.executorMap": {
+        "python": "autoinstalador/bin/python",
+    }
+    // "[python]": {
+    //     "editor.formatOnSave": true,
+    //     "editor.defaultFormatter": "autopep8",
+    // }
+    //     // "window.zoomLevel": 2,
+    //     // "editor.fontSize": 20,
+}
