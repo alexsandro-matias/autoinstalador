@@ -53,4 +53,8 @@ botao = Button(menu_inicial, text="Executar", command=libreoffice)
 botao.pack()
 
 
+label1 = Label(menu_inicial, text="Esté o matias
+")
+
+
 menu_inicial.mainloop()
