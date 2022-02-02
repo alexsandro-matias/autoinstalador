@@ -1,1 +1,1 @@
-# autoinstalador
+# autoinstalador de programas em Windows
