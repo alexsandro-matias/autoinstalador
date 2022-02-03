@@ -1,3 +1,6 @@
+from cProfile import label
+from tkinter import font
+from turtle import width
 import requests
 import os
 from tkinter import *
@@ -53,8 +56,142 @@ botao = Button(menu_inicial, text="Executar", command=libreoffice)
 botao.pack()
 
 
-label1 = Label(menu_inicial, text="Esté o matias
-")
+# label1 = Label(menu_inicial, text="matias",
+#                bg='white', fg='green', font="Times")
+
+# label2 = Label(menu_inicial, text="matias",
+#                bg='white', fg='black', font="Arial 20 bold italic")
+
+# label3 = Label(menu_inicial, text="matias", fg="grey",
+#                font="Verdana 20 bold")
+# label1.pack()
+# label2.pack()
+# label3.pack()
+
+# Outra possibilidade seria deixar o bg em Hexadecimal.
+# RGB - (Red, Green, Blue) -> bg = "#ff0000" <- nesta ordem
+
+
+# Para formatar a largura e altura do Label.
+# label_1 = Label(menu_inicial, text="Este é um Label",
+#                 bg="Red", font="Arial 20", width=20)
+# label_1.pack()
+
+# Com essa linha
+# menu_inicial.geometry("%dx%d+%d+%d" % (largura, altura, posx, posy))
+# A fonte do label irá se adaptar à janela.
+
+# Colocando texto diferentes no mesmo label em linhas separadas.
+#
+
+# Existe a possibilidade de fechar com o pack() diretamente
+# quando instanciamos os objeto Label.
+# Para isso, basta já colocar no final da instância criada.
+# label_1 = Label(
+#     menu_inicial,
+#     text="Frase1",
+#     font="Arial 20"
+# ).pack()
+
+# Porém desta forma, não será mais possível realizar nenhuma alteração neste label.
+
+# label_1 = Label(
+#     menu_inicial,
+#     text="Frase1\nFrase2",
+#     font="Arial 20"
+# )
+# label_1.pack()
+
+# Da mesma forma que as strings, o \n também permite a quebra de linha, ou seja,
+# textos em várias linhas utilizando o mesmo objeto.
+
+# Também é possível adicionar uma borda a esta label com o argumento borda.
+# label_1 = Label(
+#     menu_inicial,
+#     text="solid",
+#     border=15,  # Espessura da linha em pixels
+#     relief="solid",  # forma como será a borda 1/6
+#     font="Arial 20"
+# )
+# label_1.pack()
+# label_1 = Label(
+#     menu_inicial,
+#     text="flat",
+#     border=15,  # Espessura da linha em pixels
+#     relief="flat",  # forma como será a borda 1/6
+#     font="Arial 20"
+# )
+# label_1.pack()
+
+
+# label_1 = Label(
+#     menu_inicial,
+#     text="Frase1\nFrase2",
+#     border=15,  # Espessura da linha em pixels
+#     relief="flat",  # forma como será a borda 1/6
+#     font="Arial 20"
+# )
+# label_1 = Label(
+#     menu_inicial,
+#     text="raise",
+#     border=15,  # Espessura da linha em pixels
+#     relief="raise",  # forma como será a borda 1/6
+#     font="Arial 20"
+# )
+# label_1.pack()
+
+
+# label_1 = Label(
+#     menu_inicial,
+#     text="sunken",
+#     border=20,  # Espessura da linha em pixels
+#     relief="sunken",  # forma como será a borda 1/6
+#     font="Arial 20"
+# )
+# label_1.pack()
+
+
+# label_1 = Label(
+#     menu_inicial,
+#     text="ridge",
+#     border=15,  # Espessura da linha em pixels
+#     relief="ridge",  # forma como será a borda 1/6
+#     font="Arial 20"
+# )
+# label_1.pack()
+
+# label_1 = Label(
+#     menu_inicial,
+#     text="groove",
+#     border=20,  # Espessura da linha em pixels
+#     relief="groove",  # forma como será a borda 1/6
+#     font="Arial 20"
+# )
+# label_1.pack()
+
+# # Tipos de Relief:
+# # Solid
+# # flat
+# # raise
+# # sunken
+# # ridge
+# # groove
+
+
+# Altura do label
+
+Label_1 = Label(
+    menu_inicial,
+    text="Frase de teste\nFrase de teste",
+    font="Arial 20",
+    bd=10,
+    width=27,
+    height=6,  # Altura de duas linhas ou frases
+    relief="solid",
+    # anchor=SW  # Pontos cardeais que orientam o texto no label
+    anchor=CENTER  # centralizado
+).pack()
+# No caso acima, quando diminuimos o width, mais o texto vai sendo cortado.
 
 
 menu_inicial.mainloop()
