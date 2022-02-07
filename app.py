@@ -180,18 +180,52 @@ botao.pack()
 
 # Altura do label
 
-Label_1 = Label(
-    menu_inicial,
-    text="Frase de teste\nFrase de teste",
-    font="Arial 20",
-    bd=10,
-    width=27,
-    height=6,  # Altura de duas linhas ou frases
-    relief="solid",
-    # anchor=SW  # Pontos cardeais que orientam o texto no label
-    anchor=CENTER  # centralizado
-).pack()
-# No caso acima, quando diminuimos o width, mais o texto vai sendo cortado.
+# Label_1 = Label(
+#     menu_inicial,
+#     text="Frase de teste\nFrase de teste",
+#     font="Arial 20",
+#     bd=10,
+#     width=27,
+#     height=6,  # Altura de duas linhas ou frases
+#     relief="solid",
+#     # anchor=SW  # Pontos cardeais que orientam o texto no label
+#     anchor=CENTER  # centralizado
+# ).pack()
+# # No caso acima, quando diminuimos o width, mais o texto vai sendo cortado.
 
 
+# Outra forma de configuração dos atributos. Através do dicionário interno do objeto.
+label2 = Label(menu_inicial)
+label2['text'] = 'texto da label2.'
+label2['font'] = 'Arial 20'
+label2['bd'] = 1
+label2['relief'] = "solid"
+label2.pack()
+
+# # Como se trata de um dicionário,
+# # já possível verificar as chaves e os valores deste dicionário.
+
+# for item in label2.keys():
+#     print(item, " : ", label2[item])
+
+
+# Aula 016 - Python tkinter - LABEL TEXTVARIABLE E STRINGVAR
+
+
+texto = StringVar()
+texto.set("Alexsandro")
+
+# label3 = Label(menu_inicial, text=texto,
+#                font="Arial 20", bg="red", fg="white")
+# Nessa situação, o que será mostrado será referência da variável - PY_VAR0.
+# Para isso, existe uma chave dentro do Tkinter chamada textvariable que pode receber
+# o valor de texto.
+
+label3 = Label(menu_inicial, textvariable=texto,
+               font="Arial 20", bg="red", fg="grey")
+
+label3.pack()
+
+
+# Parei na aula 017 - Python tkinter - INTRODUÇÃO AO LAYOUT EM GRID
 menu_inicial.mainloop()
