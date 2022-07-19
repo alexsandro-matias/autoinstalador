@@ -1,8 +1,6 @@
-# from cProfile import label
-# from tkinter import font
-# from turtle import width
+
 import requests
-# import os
+import os
 from tkinter import *
 
 
